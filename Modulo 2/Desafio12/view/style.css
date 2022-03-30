@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Sriracha';
+}
+
+header{
+    text-align: center;
+    font-family: 'Passion One'; 
+    background-color: black;
+    color: white;
+    padding: 40px;
+    font-size: 2em;
+}
+
+header p{
+    font-family: 'Verdana';
+    font-size: 1rem;
+    padding-bottom: 20px;
+}
+
+header a{
+    color: white;
+}
+
+.altera_letra{
+    font-size: 1.3em;
+}
+
+/* MAIN */
+
+main{
+    line-height: 60px
+}
+
+.altera_paragrafo{
+    margin: 30px;
+    font-size: 2em;
+}
+
+.efeito{
+    background-color: rgba(0, 0, 0, 0.438);
+    max-width: 380px;
+    color: white;
+    margin: 2vh;
+}
+
+#efeito_parallax_1{
+    background: url('../imagens/background001.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+#efeito_parallax_2{
+    background: url('../imagens/background002.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: fixed;
+}
+/* FOOTER */
+
+footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}

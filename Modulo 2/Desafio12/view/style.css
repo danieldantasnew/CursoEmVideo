@@ -33,6 +33,10 @@ header a{
     color: white;
 }
 
+header a:hover{
+    text-decoration: underline;
+}
+
 .altera_letra{
     font-size: 1.3em;
 }
@@ -50,24 +54,49 @@ main{
 
 .efeito{
     background-color: rgba(0, 0, 0, 0.438);
-    max-width: 380px;
+    display: inline-block;
+    padding: 8px;
     color: white;
     margin: 2vh;
 }
 
-#efeito_parallax_1{
-    background: url('../imagens/background001.jpg');
-    background-repeat: no-repeat;
+.imagem{
     background-position: right center;
     background-attachment: fixed;
+    background-size: cover;
+}
+
+#efeito_parallax_1{
+    background-image: url('../imagens/background001.jpg');
+
 }
 
 #efeito_parallax_2{
-    background: url('../imagens/background002.jpg');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-attachment: fixed;
+    background-image: url('../imagens/background002.jpg');
 }
+
+
+@media (max-width: 650px){
+
+    header{
+        font-size: 1.6em;
+        padding: 20px;
+    }
+
+    main{
+        line-height: 40px
+    }
+
+    .altera_paragrafo{
+        margin: 30px;
+        font-size: 1.2em;
+    }
+
+    .efeito{
+        padding: 20px;
+    }
+}
+
 /* FOOTER */
 
 footer{

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        table{
+            border-collapse: collapse;
+            font-size: 1.5em;
+            width: 600px;
+            margin: auto;
+            position: relative;
+        }
+
+        caption{
+            padding: 10px;
+            font-weight: bold;
+            background-color: #383838ad;
+        }
+
+        th{
+            padding: 10px;
+            border: 1px solid black;
+            background-color: #383838ad;
+            color: white;
+        }
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        td{
+            padding: 10px;
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        tr:nth-child(2n){
+            background-color: #383838ad;
+        }
+
+        .numero{
+            text-align: right;
+        }
+
+        p{
+            margin-top: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de Tabelas</h1>
+
+    <table>
+        <caption>Estados mais populosos do Brasil</caption>
+        <thead>
+            <th scope="col">Estado</th>
+            <th scope="col">População</th>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero"><strong>46.649.132</strong></td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero"><strong>21.411.923</strong></td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero"><strong>17.463.349</strong></td>
+            </tr>
+
+            <tr>
+                <td>Bahia</td>
+                <td class="numero"><strong>14.985.284</strong></td>
+            </tr>
+
+            <tr>
+                <td>Paraná</td>
+                <td class="numero"><strong>11.597.484</strong></td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero"><strong>11.466.630</strong></td>
+            </tr>
+
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero"><strong>9.674.793</strong></td>
+            </tr>
+
+            <tr>
+                <td>Ceará</td>
+                <td class="numero"><strong>9.240.580</strong></td>
+            </tr>
+
+            <tr>
+                <td>Pará</td>
+                <td class="numero"><strong>8.777.124</strong></td>
+            </tr>
+
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero"><strong>7.338.473</strong></td>
+            </tr>
+
+            <tr>
+                <td>Goiás</td>
+                <td class="numero"><strong>7.206.589</strong></td>
+            </tr>
+
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero"><strong>7.153.262</strong></td>
+            </tr>
+
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero"><strong>4.269.995</strong></td>
+            </tr>
+
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="numero"><strong>4.108.508</strong></td>
+            </tr>
+
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero"><strong>4.059.905</strong></td>
+            </tr>
+
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero"><strong>3.567.234</strong></td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero"><strong>3.560.903</strong></td>
+            </tr>
+
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero"><strong>3.365.351</strong></td>
+            </tr>
+
+            <tr>
+                <td>Piauí</td>
+                <td class="numero"><strong>3.289.290</strong></td>
+            </tr>
+
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="numero"><strong>3.094.325</strong></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th scope="row">Total de Habitantes</th>
+            <td class="numero"><strong>210.147.125</strong></td>
+            <!--Mesmo que o Tfoot ficasse acima da tag thead ainda assim ele ficaria embaixo por causa da sua semântica-->
+        </tfoot>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, deleniti error repudiandae expedita facere enim ipsam quidem nulla beatae amet est facilis voluptas vero ea laboriosam libero? Quia, aut unde!</p>
+</body>
+</html>

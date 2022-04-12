@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidor de velocidade</title>
+</head>
+<body>
+    <h1>Calculando se está acima da velocidade permitida</h1>
+
+    <p>
+        <input type="number" name="velocidade" id="velocidade">Digite a velocidade em que está percorrendo
+
+        <button id="verificar">Verificar</button>
+    </p>
+    
+    <p id="msg"></p>
+    
+    <script>
+        var verifica = document.getElementById('verificar')
+
+        verifica.addEventListener('click', cal_velo)
+
+
+        function cal_velo() {
+            var velo = document.getElementById('velocidade')
+            var numero = Number(velo.value)
+
+            var mensagem = document.getElementById('msg')
+
+            if(numero > 60){
+                
+                mensagem.innerHTML = `Você está a ${numero}Km/h, velocidade acima do permitido. MULTADO!`
+            }
+
+            else{
+                mensagem.innerHTML = `Sua velocidade está no limite máximo permitido, lembre de usar o cinto. Siga em frente!` 
+            }
+        }
+    </script>
+</body>
+</html>

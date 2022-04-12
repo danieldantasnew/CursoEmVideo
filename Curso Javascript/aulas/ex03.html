@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando o DOM</title>
+
+    <style>
+
+        #quadrado{
+            height: 400px;
+            width: 400px;
+            background-color: darkgray;
+            color: white;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 5em;
+            text-align: center;
+        }
+
+        #quadrado p{
+
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado">
+        Interaja!!!
+    </div>
+
+
+    <script>
+        var area = document.getElementById('quadrado');
+        area.addEventListener('click', clicar);
+        area.addEventListener('mouseenter', entra);
+        area.addEventListener('mouseout', sai);
+        area.addEventListener('mousedown', clique_profundo);
+        area.addEventListener('mouseup', btn_direito_mouse);
+        area.addEventListener('mouseover', muda_cor);
+
+        function clicar() {
+            area.innerText ='CLICOU!'
+            area.style.background = 'red';
+        }
+
+        function entra() {
+            area.innerHTML = '<strong>ENTROU :P</strong>';
+        }
+
+        function sai(){
+            area.innerText = 'SAIU :)';
+        }
+
+        function clique_profundo(){
+            area.innerText = "Clique profundo ;D";
+            area.style.background = 'blue';
+        }
+
+        function btn_direito_mouse(){
+            area.innerText = 'SOLTOU :O';
+            area.style.background = 'black';
+            area.style.color = 'white';
+        }
+
+        function muda_cor(){
+            area.style.background = 'yellow';
+            area.style.color = 'black';
+        }
+    </script>
+</body>
+</html>

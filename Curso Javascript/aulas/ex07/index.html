@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+
+        h1{
+            padding-top: 12vh;
+            color: white;
+        }
+
+        h2{
+            padding: 15px 0;
+        }
+        .content{
+            width: 600px;
+            height: 400px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.151);
+            color: white;
+        }
+
+        strong{
+            color: crimson;
+        }
+
+        #imagem{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+
+    <div class="content">
+        <h2></h2>
+        <img src="img/bomdia.jpg" alt="Imagem do horário do dia/noite" id="imagem">
+    </div>
+
+
+    <script>
+        var titulo = document.getElementsByTagName('h2')[0];
+        var horario = new Date();
+        var hora = horario.getHours();
+        var minuto = horario.getMinutes();
+        var segundos = horario.getSeconds();
+
+        // Alterando o subtitulo e obtendo a hora
+
+        var img = document.getElementById('imagem');
+
+        // Altera o source da imagem, consequentemente muda de onde vem a imagem
+
+        var plano = document.body;
+
+        // Obtem o body, o que permite editar o seu background
+
+        if(hora < 5){
+            titulo.innerHTML = `Boa madrugada! Agora são <strong>${hora}:${minuto}:${segundos}</strong>`
+            img.src = 'img/madrugada.jpg'
+            plano.style.background = '#353332'
+        }
+
+        else if (hora < 12){
+            titulo.innerHTML = `Bom dia! Agora são <strong>${hora}:${minuto}:${segundos}</strong>`
+            img.src = 'img/bomdia.jpg'
+            plano.style.background = '#0084ff'
+        }
+
+        else if(hora <= 18){
+            titulo.innerHTML = `Boa tarde! Agora são <strong>${hora}:${minuto}:${segundos}</strong>`
+            img.src = 'img/boatarde.jpg'
+            plano.style.background = '#dfa563'
+        }
+
+        else{
+            titulo.innerHTML = `Boa noite! Agora são <strong>${hora}:${minuto}:${segundos}</strong>`
+            img.src = 'img/boanoite.jpg'
+            plano.style.background = '#0a245e'
+        }
+    </script>
+</body>
+</html>

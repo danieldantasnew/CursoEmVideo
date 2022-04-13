@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando DOM</title>
+
+    <style>
+        body{
+            font-size: 2em;
+        }
+        input, button{
+            width: 70px;
+            height: 25px;
+            font-size: 0.5em;
+        }
+
+        #altera_corpo{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="altera_corpo">
+        <h1>SOMA DE DOIS NÚMEROS</h1>
+
+        <input type="number" id="t_n1"> +
+    
+        <input type="number" id="t_n2">
+    
+        <button id = "botao" type="submit">SOMAR</button>
+    
+        <p>RESULTADO: </p>
+
+
+        <button id="altera">Altera</button>
+    </div>
+
+    <script>
+
+        var botao = document.getElementById('botao')
+
+        botao.addEventListener('click', somar) //quando o botão ouvir o click ele vai executar a função SOMAR
+
+        function somar(){
+            var t_numero1 = document.getElementById('t_n1') //vai pegar o que foi inserido no input
+            var t_numero2 = document.getElementById('t_n2')
+
+            var numero1 = Number(t_numero1.value) // vai transformar em um número
+            var numero2 = Number(t_numero2.value)
+
+            var resultado = numero1 + numero2
+
+            var mostra_resultado = document.getElementsByTagName('p')[0]
+
+            mostra_resultado.innerText = `O RESULTADO É ${resultado}`;
+        }
+
+        var altera_plano = document.getElementById('altera')
+        altera_plano.addEventListener('click', alterou)
+
+        function alterou(){
+            var altera_div = document.getElementById('altera_corpo')
+
+            altera_div.style.background = 'black'
+            altera_div.style.color = 'white'
+        }
+    </script>
+</body>
+</html>

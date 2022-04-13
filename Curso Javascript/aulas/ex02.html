@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body{
+            background-color: darkgray;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Entendendo o <strong>DOM</strong></h1>
+
+    <p>Eu posso mudar esse texto com o DOM</p>
+
+    <p>Eu posso alterar a cor desse texto com o DOM</p>
+
+    <p id="identifica">Eu posso alterar por ID</p>
+
+    <p class="classe">Eu posso alterar por CLASSE</p>
+
+    <script>
+        var teste1 = document.getElementsByTagName('p')[0]
+        teste1.innerText = "Texto alterado com o DOM" //Inner text Altera apenas o texto
+
+        var teste2 = document.getElementsByTagName('p')[1]
+        teste2.style.color = 'red'
+
+        var teste3 = document.getElementById('identifica')
+        teste3.innerHTML = '<strong>ID ALTERADO</strong>' //Inner html Altera todo html incluindo tags e textos
+
+        var teste4 = document.querySelector('p.classe')
+        teste4.style.background = 'green'
+    </script>
+</body>
+</html>

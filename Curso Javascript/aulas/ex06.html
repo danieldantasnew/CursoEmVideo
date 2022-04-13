@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiros</title>
+</head>
+<body>
+    <h1>De qual país você é?</h1>
+
+    <input type="text" id="nacionalidade">
+    <button id="verifica">Verificar</button>
+
+    <p id="msg"></p>
+
+    <script>
+        var botao = document.getElementById('verifica')
+        botao.addEventListener('click', nacao)
+
+        var mensagem = document.getElementById('msg')
+        
+
+        function nacao() {
+            var recebe = document.getElementById('nacionalidade')
+
+            var nacionalidade_verifica = String(recebe.value).toLocaleUpperCase()
+
+            if (nacionalidade_verifica == 'BRASIL') {
+                mensagem.innerHTML = `Você é brasileiro, não desiste nunca!` 
+            }
+
+            else{
+                mensagem.innerHTML = `Você é estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>

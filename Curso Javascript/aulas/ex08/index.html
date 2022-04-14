@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+
+    <style>
+
+        body{
+            text-align: center;
+            background-color: rgb(41, 163, 219);
+            font-size: 1.4em;
+        }
+
+        #unico{
+            padding-top: 20px;
+        }
+
+        .content{
+            width: 600px;
+            height: 500px;
+            background-color: rgba(255, 255, 255, 0.13);
+            margin: auto;
+        }
+
+        #foto{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de idade</h1>
+
+    <div class="content">
+        <p id="unico">Ano de nascimento:
+            <input type="number" name="nascimento" id="nascimento">
+        </p>
+
+        <p>Sexo: 
+
+            <input type="radio" id="masc" name="radsexo" checked>
+            <label for="m">Masculino</label>
+
+            <input type="radio" id="fem" name="radsexo">
+            <label for="f">Feminino</label>
+
+            <button id="verifica">Verificar</button>
+        </p>
+
+        <p id="frase">Digite os dados para ver o resultado!</p>
+
+        <div id="res_img">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var botao = document.getElementById('verifica')
+        botao.addEventListener('click', verifica_idade)
+
+        function verifica_idade() {
+            var ano = new Date();
+            var ano_atual = ano.getFullYear();
+
+            var sexo = document.getElementsByName('radsexo')
+
+            var ano_digitado = document.getElementById('nascimento')
+
+            var ano_nascimento = Number(ano_digitado.value)
+
+            var calculo_idade = ano_atual - ano_nascimento
+
+            var obtem_frase = document.getElementById('frase')
+            var genero = ''
+
+            var div_imagem = document.getElementById('res_img')
+
+            var imagem = document.createElement('img')
+
+            imagem.setAttribute('id', 'foto') // o da esquerda é o atributo criado e o da direita o parâmetro, nesse exemplo é o mesmo que id = 'foto'
+
+            if(calculo_idade < 0 || calculo_idade > 110){
+                obtem_frase.innerText = 'Pela idade é provável que já tenha morrido, virado uma múmia ou nem nascido ainda.'
+
+                imagem.setAttribute('src', 'img/mumia.jpg')
+            }
+
+            else if(calculo_idade <= 10){
+                if (sexo[0].checked) {
+                    genero = 'Homem'
+                    obtem_frase.innerText = `Foi identificado um ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/crianca_homem.jpg')
+
+                } else {
+                    genero = 'Mulher'
+                    obtem_frase.innerText = `Foi identificado uma ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/crianca_mulher.jpg')
+                }
+            }
+
+            else if(calculo_idade <= 25){
+                if (sexo[0].checked) {
+                    genero = 'Homem'
+                    obtem_frase.innerText = `Foi identificado um ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/adolescente_homem.jpg')
+
+                } else {
+                    genero = 'Mulher'
+                    obtem_frase.innerText = `Foi identificado uma ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/adolescente.jpg')
+                }
+            }
+
+            else if(calculo_idade <= 50){
+                if (sexo[0].checked) {
+                    genero = 'Homem'
+                    obtem_frase.innerText = `Foi identificado um ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/adulto_homem.jpg')
+                } else {
+                    genero = 'Mulher'
+                    obtem_frase.innerText = `Foi identificado uma ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/adulto_mulher.jpg')
+                }
+            }
+
+            else{
+                if (sexo[0].checked) {
+                    genero = 'Homem'
+                    obtem_frase.innerText = `Foi identificado um ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/idoso_homem.jpg')
+                } else {
+                    genero = 'Mulher'
+                    obtem_frase.innerText = `Foi identificado uma ${genero} de ${calculo_idade} anos`
+
+                    imagem.setAttribute('src', 'img/idosa_mulher.jpg')
+                }
+            }
+
+            div_imagem.appendChild(imagem) //adiciona o elemento a div selecionada, nesse caso a res_img, fazendo com que se crie a tag img com id foto e src com o endereço da imagem.
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+    background-color: rgb(16, 153, 187);
+}
+
+h1{
+    font-size: 4em;
+}
+
+section{
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 1.5em;
+    max-width: 50%;
+    max-height: 100%;
+    background-color: rgba(255, 255, 255, 0.205);
+    margin: auto;
+    border-radius: 10px;
+}
+
+#titulo{
+    padding-top: 10px;
+}
+
+#resultado{
+    padding: 30px 2px;
+}
+
+#contar{
+    padding: 10px 20px;
+    font-size: 0.8em;
+    border-radius: 5px;
+}
+
+footer{
+    padding: 20px;
+    font-size: 2em;
+}

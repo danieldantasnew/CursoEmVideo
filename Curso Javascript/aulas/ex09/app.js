@@ -14,7 +14,7 @@ function verifica() {
 
     var mensagem = document.getElementById('titulo')
 
-    if(contador == 0 && fim == 0){
+    if(inicio_valor.value.length == 0 || fim_valor.value.length == 0 || passo_valor.value.length == 0){
         alert('Por favor, preencha os campos corretamente!')
     }
 

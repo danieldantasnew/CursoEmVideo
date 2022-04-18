@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(27, 138, 230);
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+    max-height: 800px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.281);
+    padding: 10px;
+}
+
+.edita_div{
+    padding: 10px;
+}
+
+#texto{
+    resize: none;
+}

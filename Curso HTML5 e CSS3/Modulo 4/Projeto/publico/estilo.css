@@ -50,6 +50,10 @@ nav > a > img:hover{
     margin: 10vh 10vw;
 }
 
-iframe{
-    height: 580px;
+iframe#tela{
+    position: relative;
+    top: 81px;
+    left: 22.4px;
+    height: 470px;
+    width: 267px;
 }

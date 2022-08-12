@@ -46,10 +46,25 @@
             <textarea name="mensagem" id="imensagem" cols="30" rows="10" placeholder="Deixe sua mensagem..."></textarea>
         </p>
 
+        <h1>Color, Range e file</h1>
+
+        <form action="teste.php" method="post" autocomplete="on">
+            <label for="icor">Escolha a cor:</label>
+            <input type="color" name="cor" id="icor" >
+            <br>
+
+            <label for="iRange">Escolha a intensidade da cor:</label>
+            <input type="range" name="intensidaded" id="iRange" min="1" max="5" value="2">
+
+            <br>
+            
+            <label for="iArquivo">Envie o seu arquivo:</label>
+            <input type="file" name="arquivo" id="iArquivo">
+        </form>
+
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </p>
-    </form>
 </body>
 </html>

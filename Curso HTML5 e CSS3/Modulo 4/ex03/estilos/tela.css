@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    padding: 10px;
+    text-align: justify;
+}
+
+h1{
+    text-align: center;
+    background-color: darkcyan;
+}
+
+li{
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px;
+}
+
+header{
+    padding: 10px;
+    background-color: darkgray;
+}
+
+p{
+    padding: 10px;
+}
+

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    padding: 10px;
+}
+
+article{
+    margin: auto;
+    width: 500px;
+    text-align: justify;
+}
+
+article::after{
+    content: 'Artigo impresso de danieldantas.com.br';
+    font-weight: bold;
+    font-style: italic;
+}
+h1{
+    text-align: center;
+    background-color: darkcyan;
+}
+
+li{
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px;
+}
+
+header{
+    display: none;
+}
+
+p{
+    padding: 10px;
+}
+

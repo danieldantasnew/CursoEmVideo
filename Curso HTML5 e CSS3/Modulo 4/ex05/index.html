@@ -10,8 +10,23 @@
 <body>
     <header>
         <h1>Meu Site</h1>
-
-        <nav>
+        <button id="menu">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+        <nav id="navegacao">
             <ul>
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
@@ -33,5 +48,23 @@
 
         </article>
     </main>
+
+    <script>
+        var botao_menu = document.getElementById('menu');
+
+        botao_menu.addEventListener('click', altera);
+
+        var navega = document.getElementById('navegacao');
+        
+        function altera(){
+            if(navega.style.display == 'block'){
+                navega.style.display = 'none';
+            }
+
+            else{
+                navega.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@media (min-width: 768px){
+    #menu{
+        display: none;
+    }
+
+    #navegacao{
+        display: block;
+    }
+
+    nav > ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main{
+        max-width: 800px;
+    }
+}

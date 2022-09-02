@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="media.css" media="screen">
 </head>
-<body>
+<body onresize = mudouTamanho()>
     <header>
         <h1>Meu Site</h1>
         <button id="menu">
@@ -65,6 +66,17 @@
                 navega.style.display = 'block'
             }
         }
+
+        // A função mudou tamanho identifica o tamanho da tela, se ela é igual ou menor que 768px e assim "força" a aparição do menu em telas maiores mesmo quando clica para aparecer e esconder no menu hamburguer (corrigindo o bug).
+        function mudouTamanho(){
+            if (window.innerWidth >= 768) {
+                navega.style.display = 'block';
+            }
+            else{
+                navega.style.display = 'none';
+            }
+        }
+        
     </script>
 </body>
 </html>

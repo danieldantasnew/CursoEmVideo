@@ -56,7 +56,7 @@ main > #tela_login > #entradas >#informacoes > p{
 
 #imagem_conteiner{
     height: 100%;
-    width: 50vw;
+    width: 100%;
 }
 
 #imagem{

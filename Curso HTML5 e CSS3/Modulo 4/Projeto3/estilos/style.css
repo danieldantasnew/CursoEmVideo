@@ -54,6 +54,11 @@ main > #tela_login > #entradas >#informacoes > p{
     align-items: center;
 }
 
+#imagem_conteiner{
+    height: 100%;
+    width: 50vw;
+}
+
 #imagem{
     background-image: url(../imagens/crianca.jpeg);
     background-position: center;

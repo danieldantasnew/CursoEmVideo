@@ -4,8 +4,8 @@
     #tela_login{
         display: flex;
         flex-direction: row;
-        min-width: 740px;
-        height: 360px;
+        width: 80vw;
+        height: 70vh;
     }
 
     #entradas{
@@ -14,8 +14,17 @@
         align-items: center;
         justify-content: center;
         margin-top: 3vh;
+        width: 50vw;
     }
-    
+
+    #imagem{
+        background-image: url(../imagens/crianca.jpeg);
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 15px 15px 0px 0px; */
+    }
     .ajustes_botao2{
         width: 350px;
     }

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@media (min-width: 768px){
+    #tela_login{
+        display: flex;
+        flex-direction: row;
+        min-width: 740px;
+        height: 360px;
+    }
+
+    #entradas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3vh;
+    }
+    
+    .ajustes_botao2{
+        width: 350px;
+    }
+
+    .teste{
+        width: 350px;
+    }
+}

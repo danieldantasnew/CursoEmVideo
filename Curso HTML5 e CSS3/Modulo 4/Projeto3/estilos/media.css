@@ -31,10 +31,23 @@
     }
 
     .ajustes_botao2{
-        width: 350px;
+        width: 37vw;
     }
 
     .teste{
-        width: 350px;
+        width: 37vw;
+    }
+
+    #entradas{
+        gap: 10vh;
+        padding: 10px 0px;
+    }
+
+    #entradas > #informacoes{
+        font-size: 1.3em;
+    }
+
+    #informacoes > p{
+       margin: 20px auto;
     }
 }

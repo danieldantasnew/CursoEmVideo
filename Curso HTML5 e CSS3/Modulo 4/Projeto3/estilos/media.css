@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (min-height: 605px){
     #tela_login{
         display: flex;
         flex-direction: row;

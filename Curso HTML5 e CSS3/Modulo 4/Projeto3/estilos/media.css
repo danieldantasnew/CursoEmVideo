@@ -1,19 +1,10 @@
 @charset "UTF-8";
 
-@media (min-width: 768px) and (min-height: 605px){
+@media (min-width: 900px) and (min-height: 545px){
     #tela_login{
         display: flex;
         flex-direction: row;
-        width: 80vw;
-        height: 70vh;
-    }
-
-    #entradas{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 3vh;
+        height: 58vh;
         width: 50vw;
     }
 
@@ -26,28 +17,60 @@
         /* border-radius: 15px 15px 0px 0px; */
     }
 
+    #entradas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 3vh;
+        width: 50vw;
+    }
+
+    .ajusta_entrada{
+        height: 33px;
+        width: 95%;
+    }
+
+    .ajusta_entrada::placeholder{
+        font-size: 0.9em;
+    }
+
+    .ajustes_botao2{
+        height: 43px;
+        width: 25vw;
+    }
+
+    .teste{
+        height: 43px;
+        width: 25vw;
+    }
+
+}
+
+@media (min-width: 1200px) and (min-height: 730px){
+    #tela_login{
+        display: flex;
+        flex-direction: row;
+        max-height: 60vh;
+        min-height: 50vh;
+        max-width: 60vw;
+        min-width: 50vw;
+    }
+
+    #entradas{
+        gap: 5vh;
+    }
+
     #imagem_conteiner{
         width: 50vw;
     }
 
-    .ajustes_botao2{
-        width: 37vw;
-    }
-
-    .teste{
-        width: 37vw;
-    }
-
-    #entradas{
-        gap: 10vh;
-        padding: 10px 0px;
-    }
-
     #entradas > #informacoes{
-        font-size: 1.3em;
+        font-size: 1.1rem;
     }
 
     #informacoes > p{
        margin: 20px auto;
     }
 }
+

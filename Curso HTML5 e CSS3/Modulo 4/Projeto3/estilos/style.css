@@ -84,7 +84,7 @@ main > #tela_login > #entradas >#informacoes > p{
 }
 
 .ajusta_entrada{
-    height: 33px;
+    height: 25px;
     width: 85%;
     border-radius: 15px;
     outline: none;
@@ -98,7 +98,7 @@ main > #tela_login > #entradas >#informacoes > p{
 }
 
 .ajusta_entrada::placeholder{
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 #botao_entrar{
@@ -108,7 +108,7 @@ main > #tela_login > #entradas >#informacoes > p{
 
 .ajustes_botao2{
     border: 1px solid var(--verde);
-    height: 43px;
+    height: 33px;
     width: 260px;
     font-size: 1.1em;
     border-radius: 10px;
@@ -121,12 +121,12 @@ main > #tela_login > #entradas >#informacoes > p{
 }
 
 .teste{
-    height: 43px;
+    height: 35px;
     width: 260px;
     background-color: #5f2c82;
     border-radius: 10px;
     margin: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }

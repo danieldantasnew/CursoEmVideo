@@ -5,16 +5,20 @@
         display: none;
     }
 
-    #navegacao{
-        display: block;
+    #nav #navegacao{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        position: relative;
+        transition: none;
+        visibility: visible;
+        height: auto;
+        overflow: auto;
     }
 
-    nav > ul{
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        align-items: center;
-        justify-content: center;
+    #navegacao > li{
+        border-radius: 10px;
+        margin-left: 5px;
     }
 
     main{

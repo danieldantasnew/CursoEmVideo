@@ -11,24 +11,14 @@
 <body onresize = mudouTamanho()>
     <header>
         <h1>Meu Site</h1>
-        <button id="menu">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-        </button>
-        <nav id="navegacao">
-            <ul>
+        <nav id="nav">
+            <div id="menu">
+                <button id="btn-menu">
+                    <span id="hamb"></span>
+                </button>
+            </div>
+
+            <ul id="navegacao">
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
                 <li><a href="#">Opção 3</a></li>
@@ -51,31 +41,38 @@
     </main>
 
     <script>
-        var botao_menu = document.getElementById('menu');
+        const botao_menu = document.getElementById('menu');
 
         botao_menu.addEventListener('click', altera);
 
-        var navega = document.getElementById('navegacao');
-        
-        function altera(){
-            if(navega.style.display == 'block'){
-                navega.style.display = 'none';
-            }
+        const navega = document.getElementById('navegacao');
 
-            else{
-                navega.style.display = 'block'
-            }
+
+        const nav = document.getElementById('nav');
+
+        function altera(){
+            nav.classList.toggle('active');
         }
+        
+        // function altera(){
+        //     if(navega.style.display == 'block'){
+        //         navega.style.display = 'none';
+        //     }
+
+        //     else{
+        //         navega.style.display = 'block'
+        //     }
+        // }
 
         // A função mudou tamanho identifica o tamanho da tela, se ela é igual ou menor que 768px e assim "força" a aparição do menu em telas maiores mesmo quando clica para aparecer e esconder no menu hamburguer (corrigindo o bug).
-        function mudouTamanho(){
-            if (window.innerWidth >= 768) {
-                navega.style.display = 'block';
-            }
-            else{
-                navega.style.display = 'none';
-            }
-        }
+        // function mudouTamanho(){
+        //     if (window.innerWidth >= 768) {
+        //         navega.style.display = 'block';
+        //     }
+        //     else{
+        //         navega.style.display = 'none';
+        //     }
+        // }
         
     </script>
 </body>

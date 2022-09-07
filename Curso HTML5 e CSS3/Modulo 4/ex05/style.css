@@ -24,18 +24,18 @@ header > h1{
     padding: 5px;
 }
 
-header > nav > ul > li{
+header > #nav > #navegacao > li{
     background-color: rgba(0, 0, 0, 0.658);
     padding: 10px;
     border-top: 1px rgba(255, 255, 255, 0.658) solid;
 }
 
-header > nav > ul > li:hover{
+header > #nav > #navegacao > li:hover{
     background-color: rgba(0, 0, 0, 0.473);
     font-weight: bold;
 }
 
-header > nav > ul > li > a{
+header > #nav > #navegacao > li > a{
     text-decoration: none;
     color: white;
     padding: 5px;
@@ -62,19 +62,72 @@ main > article > p{
     text-align: justify;
 }
 
-#menu{
+#nav{
     display: block;
-    background-color: rgba(0, 0, 0, 0.877);
+    background-color: black;
     color: white;
     cursor: pointer;
+    width: 100%;
+}
+
+#nav #navegacao{
+    display: block;
+    background-color: rgb(190, 185, 185);
+    position: absolute;
     width: 100vw;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .7s;
+    height: 0px;
 }
 
-#menu:hover{
-    color: black;
-    background-color: rgba(255, 255, 255, 0.911);
+#nav.active #navegacao{
+
+    visibility: visible;
+    height: 196px;
 }
 
-#navegacao{
-    display: none;
+#menu{
+    background-color: black;
+}
+
+#btn-menu{
+    margin-left: 20px;
+    padding: 10px;
+    background-color: black;
+    cursor: pointer;
+}
+
+ /* Botão Hamburguer  */
+#hamb{
+    display: block;
+    border-top: 2px solid;
+    color: white;
+    width: 20px;
+}
+
+#hamb::after, #hamb::before{
+    display: block;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+}
+
+#nav.active #hamb{
+    border-top-color: transparent;
+}
+
+#nav.active #hamb::before{
+    transform: rotate(135deg);
+    transition: .7s;
+}
+
+#nav.active #hamb::after{
+    position: relative;
+    transform: rotate(-135deg);
+    top: -7px;
+    transition: .7s;
 }

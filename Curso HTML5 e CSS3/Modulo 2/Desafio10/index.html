@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 10</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="media.css" media="screen">
 </head>
 <body>
     <header>
@@ -20,11 +21,20 @@
         </div>
     </header>
 
-    <nav>
-            <a href="#Home">Home</a>
-            <a href="#Noticias">Notícias</a>
-            <a href="#Curiosidades">Curiosidades</a>
-            <a href="#FaleConosco">Fale Conosco</a>
+    <nav id="nav">
+            <div id="menu">
+                <button id="btn-menu">
+                    <span id="ham"></span>
+                </button>
+            </div>
+
+            <ul id="lista">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Noticias">Notícias</a></li>
+                <li><a href="#Curiosidades">Curiosidades</a></li>
+                <li><a href="#FaleConosco">Fale Conosco</a></li>
+            </ul>
+
     </nav>
 
     <main>
@@ -120,5 +130,17 @@
     </main>
 
     <footer>Site criado por <strong>Gustavo Guanabara</strong> para o <b>CursoemVideo</b></footer>
+
+    <script>
+        const botaoMenu = document.getElementById('btn-menu');
+
+        botaoMenu.addEventListener('click', altera);
+
+        const navegacao = document.getElementById('nav');
+
+        function altera(){
+            navegacao.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

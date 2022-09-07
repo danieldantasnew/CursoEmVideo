@@ -1,0 +1,44 @@
+@media (min-width: 798px){
+    #nav{
+        display: block;
+        background-color: #175c35;
+        padding: 10px;
+        text-align: center;      
+    }
+    
+    #nav > #lista{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #nav a{
+        color: white;
+        padding: 6px;
+        position: relative;
+    }
+    
+    #nav a:hover{
+        color: #2cc970;
+        transition: 400ms;
+    }
+    
+    #nav a::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        background-color: #2cc970;
+        bottom: -2px;
+    }
+    
+    #nav a:hover::after{
+        width: 100%;
+        transition: width 200ms ease-in-out 0.1s;
+    }
+
+    #menu{
+        display: none;
+    }
+}

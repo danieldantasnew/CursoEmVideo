@@ -44,6 +44,10 @@ header h1{
     margin-bottom: 30px;
 }
 
+ul{
+    list-style: none;
+}
+
 .cabeca{
     max-width: 100%;
 }
@@ -52,36 +56,93 @@ header h1{
     text-align: center;
 }
 
-nav{
+#nav{
+    display: block;
     background-color: #175c35;
-    padding: 10px;
-    
+    text-align: center;
 }
 
-nav a{
+#lista a{
     color: white;
     padding: 6px;
     position: relative;
 }
 
-nav a:hover{
+#lista a:hover{
     color: #2cc970;
     transition: 400ms;
 }
 
-nav a::after{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    background-color: #2cc970;
-    bottom: -2px;
+#lista > li {
+    margin: 30px;
+    padding: 12px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.692);
 }
 
-nav a:hover::after{
+#menu{
+    display: flex;
+    justify-content: center;
+    background-color: #6f7973cc;
     width: 100%;
-    transition: width 200ms ease-in-out 0.1s;
+    height: 50px;
+}
+
+#btn-menu{
+    display: block;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#nav #lista{
+    display: block;
+    position: absolute;
+    background-color: #175c35f1;
+    font-size: 1.3em;
+    width: 100%;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .7s;
+    height: 0px;
+}
+
+#nav.active #lista{
+    visibility: visible;
+    height: calc(100vh - 210px);
+}
+
+#ham{
+    display: block;
+    color: white;
+    width: 20px;
+    border-top: 2px solid;
+}
+
+#ham::after, #ham::before{
+    display: block;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+}
+
+#nav.active #ham{
+    border-top-color: transparent;
+}
+
+#nav.active #ham::before{
+    transition: .7s;
+    transform: rotate(135deg);
+}
+
+#nav.active #ham::after{
+    position: relative;
+    transform: rotate(-135deg);
+    transition: .7s;
+    top: -7px;
 }
 
 body{

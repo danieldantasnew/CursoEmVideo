@@ -64,7 +64,7 @@ ul{
 
 #lista a{
     color: white;
-    padding: 6px;
+    padding: 6px 10px;
     position: relative;
 }
 
@@ -74,7 +74,7 @@ ul{
 }
 
 #lista > li {
-    margin: 30px;
+    margin: 3px 0;
     padding: 12px 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.692);
 }
@@ -106,6 +106,7 @@ ul{
     overflow-y: hidden;
     transition: .7s;
     height: 0px;
+    text-align: left;
 }
 
 #nav.active #lista{

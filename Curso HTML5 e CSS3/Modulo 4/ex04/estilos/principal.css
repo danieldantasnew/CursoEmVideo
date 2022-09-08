@@ -94,16 +94,16 @@ a{
 
 #ham{
     display: block;
-    width: 20px;
+    width: 30px;
     color: white;
-    border-top: 2px solid;
+    border-top: 3px solid;
 }
 
 #ham::after, #ham::before{
     display: block;
     content: '';
-    width: 20px;
-    height: 2px;
+    width: 30px;
+    height: 3px;
     background-color: currentColor;
     margin-top: 5px;
 }

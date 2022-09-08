@@ -6,7 +6,7 @@
 
 html, body{
     font-family: Arial, Helvetica, sans-serif;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: #233eff;
     background-repeat: no-repeat;
@@ -17,4 +17,109 @@ h1{
     text-align: center;
     text-shadow: 5px 0px rgba(0, 0, 0, 0.637);
     color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#bg-menu{
+    width: 100%;
+    background-color: transparent;
+    height: 50px;
+}
+
+#btn-menu{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    background: transparent;
+    border: none;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-top: 10px;
+}
+
+#Logo{
+    font-size: 1.9em;
+    color: white;
+    padding-left: 10px;
+}
+
+#menu >  #lista{
+    display: block;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    background: #233eff;
+    visibility: hidden;
+    height: 0px;
+    transition: .5s;
+    overflow-y: hidden;
+}
+
+#menu >  #lista > li{
+    margin: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.164);
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+#menu > #lista > li > a{
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+}
+
+#menu >  #lista > li > a:hover{
+    background: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+}
+
+#menu.active > #lista{
+    display: block;
+    visibility: visible;
+    height: calc(100vh - 150px);
+}
+
+#ham{
+    display: block;
+    width: 20px;
+    color: white;
+    border-top: 2px solid;
+}
+
+#ham::after, #ham::before{
+    display: block;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+}
+
+#menu.active #ham{
+    border-top-color: transparent;
+}
+
+#menu.active #ham::before{
+    transition: .5s;
+    transform: rotate(225deg);
+}
+
+#menu.active #ham::after{
+    position: relative;
+    transition: .5s;
+    transform: rotate(-225deg);
+    top: -7px
 }

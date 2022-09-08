@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@media (min-width: 768px){
+
+    #menu{
+        max-width: 960px;
+        margin: auto;
+    }
+
+    #btn-menu{
+        display: none;
+    }
+    
+    #menu > #lista{
+        display: flex;
+        align-items: center;
+        background: none;
+        position: relative;
+        height: auto;
+        top: 0;
+        visibility: visible;
+        width: auto;
+    }
+
+    #menu >  #lista > li{
+        border: none;
+        padding-bottom: initial;
+        margin-right:40px;
+        width: 100px;
+    }
+
+    #menu.active #lista{
+        display: flex;
+        visibility: visible;
+        overflow: auto;
+    }
+}

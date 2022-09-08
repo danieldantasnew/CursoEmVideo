@@ -8,8 +8,36 @@
     <link rel="stylesheet" href="estilos/principal.css" media ="all">
     <link rel="stylesheet" href="estilos/retrato.css" media = "screen and (orientation: portrait)">
     <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="estilos/media.css" media="screen">
 </head>
 <body>
     <h1>Mude a orientação do seu dispositivo</h1>
+
+    <div id="bg-menu">
+        <nav id="menu">
+            <a href="#" id="Logo">Logo</a>
+
+            <button id="btn-menu">
+                <span id="ham"></span>
+            </button>
+
+            <ul id="lista">
+                <li><a href="#">Sobre</a></li>
+                <li><a href="">Planos</a></li>
+                <li><a href="">Cursos</a></li>
+                <li><a href="">Curiosidades</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        const botaoMenu = document.getElementById('btn-menu');
+        botaoMenu.addEventListener('click', altera);
+        const menu = document.getElementById('menu')
+
+        function altera(){
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

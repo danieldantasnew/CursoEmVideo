@@ -2,3 +2,5 @@ body{
     background-image: url(../imagens/cev-portrait.jpg);
     background-position: center bottom;
 }
+
+/* Por a imagem estar no body, ele acaba bugando ao diminuir demais a tela, fica tentando colocar a imagem acima do menu, isso pode ser resolvido colocando uma imagem em uma div porém como o objetivo agora é só criar o menu hambuguer pra treinar, não será feito. */

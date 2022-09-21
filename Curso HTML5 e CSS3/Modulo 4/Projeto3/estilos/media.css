@@ -23,7 +23,7 @@
     #lista_menu > li{
         margin-bottom: 20px;
         padding: 20px 2px;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.185);
     }
 
     #lista_menu > li > a{

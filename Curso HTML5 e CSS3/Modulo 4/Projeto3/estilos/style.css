@@ -84,7 +84,7 @@ a{
 }
 
 #logo:hover{
-    color: rgba(0, 0, 0, 0.479);
+    color: #5f2c82;
     transition: 300ms;
 }
 
@@ -99,7 +99,7 @@ a{
 }
 
 #lista_menu > li > a:hover{
-    color: rgba(0, 0, 0, 0.479);
+    color: #5f2c82;
     transition: 300ms;
 }
 

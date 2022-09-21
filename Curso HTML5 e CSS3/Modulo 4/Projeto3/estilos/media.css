@@ -36,9 +36,13 @@
 
     #ham{
         display: block;
-        color: #5f2c82;
+        color: white;
         border-top: 2px solid;
         width: 20px;
+    }
+
+    #ham:hover{
+        color: #5f2c82;
     }
 
     #ham::after, #ham::before{

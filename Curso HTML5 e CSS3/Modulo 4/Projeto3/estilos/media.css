@@ -1,5 +1,72 @@
 @charset "UTF-8";
 
+@media (max-width: 1200px){
+
+    #lista_menu{
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #49a09d;
+        height: 0px;
+        width: 100%;
+        visibility: hidden;
+        transition: .4s;
+        overflow-y: hidden;
+        z-index: 1000;
+    }
+
+    #menu.ativado #lista_menu{
+        visibility: visible;
+        height: calc(100vh - 70px);
+    }
+    #lista_menu > li{
+        margin-bottom: 20px;
+        padding: 20px 2px;
+        border-bottom: 2px solid white;
+    }
+
+    #lista_menu > li > a{
+        font-size: 1.2em;
+    }
+
+    #btn-menu{
+        visibility: visible;
+    }
+
+    #ham{
+        display: block;
+        color: #5f2c82;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #ham::after, #ham::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: currentColor;
+    }
+
+    #menu.ativado #ham{
+        border-top-color: transparent;
+    }
+
+    #menu.ativado #ham::before{
+        transform: rotate(135deg);
+        transition: .3s;
+    }
+
+    #menu.ativado #ham::after{
+        position: relative;
+        transform: rotate(-135deg);
+        transition: .3s;
+        top: -7px;
+    }
+}
+
 @media (min-width: 900px) and (min-height: 545px){
     body{
         background: linear-gradient(to top, #49a09d 20%, #602c82b2, #5f2c82 80%);

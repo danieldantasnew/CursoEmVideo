@@ -70,6 +70,14 @@ a{
     padding-right: 10px;
 }
 
+#btn-menu{
+    visibility: hidden;        
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
 #logo{
     font-size: 1.6em;
     font-weight: 700;

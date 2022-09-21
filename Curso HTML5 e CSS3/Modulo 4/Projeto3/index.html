@@ -13,6 +13,7 @@
         <div id="back_menu">
             <menu id="menu">
                 <a href="#" id="logo">Logo</a>
+                <button id="btn-menu"><span id="ham"></span></button>
                 <ul id="lista_menu">
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
@@ -55,5 +56,19 @@
         </section>
         <section></section>
     </main>
+
+    <script>
+        const botaoMenu = document.getElementById('btn-menu');
+
+        botaoMenu.addEventListener('click', alteraMenu);
+
+
+        const menu = document.getElementById('menu');
+
+        function alteraMenu(){
+            menu.classList.toggle('ativado');
+        }
+
+    </script>
 </body>
 </html>

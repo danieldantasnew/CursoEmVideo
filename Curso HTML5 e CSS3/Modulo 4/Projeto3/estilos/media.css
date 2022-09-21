@@ -1,10 +1,14 @@
 @charset "UTF-8";
 
 @media (min-width: 900px) and (min-height: 545px){
+    body{
+        background: linear-gradient(to top, #49a09d 20%, #602c82b2, #5f2c82 80%);
+    }
+
     #tela_login{
         display: flex;
         flex-direction: row;
-        height: 58vh;
+        height: 59vh;
         width: 50vw;
     }
 

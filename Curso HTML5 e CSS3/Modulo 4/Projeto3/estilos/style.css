@@ -33,10 +33,13 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: calc(100vh - 70px);
     width: 100vw;
 }
 
+ul{
+    list-style: none;
+}
 
 main > #tela_login > #entradas > #informacoes > h1{
     text-align: center;
@@ -45,6 +48,34 @@ main > #tela_login > #entradas > #informacoes > h1{
 main > #tela_login > #entradas >#informacoes > p{
     padding: 5px;
     font-size: 0.9em;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#back_menu{
+    height: 70px;
+    background-color: var(--verde);
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#lista_menu{
+    display: flex;
+    margin-right: 10px;
+}
+
+#lista_menu > li > a{
+    padding: 8px;    
 }
 
 #entradas{

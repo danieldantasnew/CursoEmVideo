@@ -132,6 +132,7 @@ a{
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.2);
     /* O overflow hidden irá esconder qualquer conteúdo que ultrapasse o máximo do container, na tela de login foi definido uma borda e como as "pontas" da imagem ultrapassavam a borda definida, ele acaba sendo escondido. Outro exemplo é criar uma caixa e o texto estar saindo dessa caixa, ao colocar o overflow hidden, ele irá esconder todo conteúdo que ultrapasse a caixa. */
 }
 

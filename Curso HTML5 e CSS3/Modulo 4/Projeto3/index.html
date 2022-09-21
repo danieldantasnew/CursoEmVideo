@@ -12,7 +12,7 @@
     <header>
         <div id="back_menu">
             <menu id="menu">
-                <a href="">Logo</a>
+                <a href="#" id="logo">Logo</a>
                 <ul id="lista_menu">
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
@@ -38,11 +38,11 @@
                 <form action= "teste.php" method="post" autocomplete="on">
                     <div class="ajusta_login teste">
                         <label for="ilogin"><img src="imagens/user.svg" alt="icone"></label>
-                        <input type="text" name="login" id="ilogin" class="ajusta_entrada" placeholder="Seu e-mail" required>
+                        <input type="text" name="login" id="ilogin" class="ajusta_entrada" placeholder="Seu e-mail" autocomplete="email" required>
                     </div>
                     <div class="ajusta_login teste" id="organiza_div">
                         <label for="isenha"><img src="imagens/key.svg" alt="senha"></label>
-                        <input type="password" name="senha" id="isenha" class="ajusta_entrada" placeholder="Sua senha" minlength="8" maxlength = "16" size = "16" required>
+                        <input type="password" name="senha" id="isenha" class="ajusta_entrada" placeholder="Sua senha" minlength="8" maxlength = "16" size = "16" autocomplete="current-password" required>
                     </div>
                     <div class="ajusta_login">
                         <button type="submit" class="ajustes_botao2" id="botao_entrar">Entrar</button >

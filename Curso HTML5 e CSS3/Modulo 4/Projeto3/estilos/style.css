@@ -35,6 +35,7 @@ main{
     justify-content: center;
     height: calc(100vh - 70px);
     width: 100vw;
+    overflow-y: auto;
 }
 
 ul{
@@ -69,13 +70,29 @@ a{
     padding-right: 10px;
 }
 
+#logo{
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+#logo:hover{
+    color: rgba(0, 0, 0, 0.479);
+    transition: 300ms;
+}
+
 #lista_menu{
     display: flex;
     margin-right: 10px;
 }
 
 #lista_menu > li > a{
-    padding: 8px;    
+    padding: 8px;
+    font-weight: 700;    
+}
+
+#lista_menu > li > a:hover{
+    color: rgba(0, 0, 0, 0.479);
+    transition: 300ms;
 }
 
 #entradas{
